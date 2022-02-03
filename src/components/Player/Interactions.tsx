@@ -4,13 +4,13 @@ import GoBack from "./GoBack";
 import AddToFav from "./AddToFav";
 
 const Interactions = () => {
-  return (
-    <InteractionsWrapper>
-      <GoBack />
-      <Stars />
-      <AddToFav />
-    </InteractionsWrapper>
-  );
+    return (
+        <InteractionsWrapper>
+            <GoBack />
+            <Stars />
+            <AddToFav />
+        </InteractionsWrapper>
+    );
 };
 
 export default Interactions;
