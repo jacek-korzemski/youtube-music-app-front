@@ -1,8 +1,6 @@
 import styled, { keyframes } from "styled-components";
 const bg = require("./bg.png");
 
-console.log(bg);
-
 export const Wrapper = styled.div`
     position: relative;
     top: 0;
