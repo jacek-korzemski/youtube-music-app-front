@@ -11,41 +11,41 @@ import rhammer from "assets/channels_icons/rhammer.jpg";
 import bmp from "assets/channels_icons/bmp.jpg";
 
 export const channelImage = (id: number) => {
-  switch (id) {
-    case 16:
-      return mrdoom666;
+    switch (id) {
+        case 16:
+            return mrdoom666;
 
-    case 17:
-      return nwothm;
+        case 17:
+            return nwothm;
 
-    case 46:
-      return atmoblackmetal;
+        case 46:
+            return atmoblackmetal;
 
-    case 47:
-      return gregbiehl;
+        case 47:
+            return gregbiehl;
 
-    case 48:
-      return melomano;
+        case 48:
+            return melomano;
 
-    case 49:
-      return smod;
+        case 49:
+            return smod;
 
-    case 50:
-      return dotdotdot;
+        case 50:
+            return dotdotdot;
 
-    case 51:
-      return mpampisflou;
+        case 51:
+            return mpampisflou;
 
-    case 53:
-      return heavyrockfreak;
+        case 53:
+            return heavyrockfreak;
 
-    case 54:
-      return rhammer;
+        case 54:
+            return rhammer;
 
-    case 56:
-      return bmp;
+        case 56:
+            return bmp;
 
-    default:
-      return undefined;
-  }
+        default:
+            return undefined;
+    }
 };
