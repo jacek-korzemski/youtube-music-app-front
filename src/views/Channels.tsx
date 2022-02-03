@@ -5,7 +5,7 @@ import ChannelsList from "components/ChannelsList/ChannelsList";
 import { api_url } from "Config";
 
 const Channels = () => {
-  const [loading, setLoading] = useState<boolean>(true)
+  const [loading, setLoading] = useState<boolean>(true);
   const [data, setData] = useState<any[]>([]);
   const [error, setError] = useState(false);
 
