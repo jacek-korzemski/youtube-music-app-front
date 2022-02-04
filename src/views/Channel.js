@@ -15,15 +15,15 @@ const Channel = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        setLoading(true);
         getSingleChannelData(id)
             .then((res) => {
                 setData(res);
                 setChannelTitle(res[0].channel_title);
                 setLoading(false);
             })
-            .catch((err) => {
+            .catch(() => {
                 setError(true);
+                setLoading(false);
             });
         // eslint-disable-next-line
     }, [id]);

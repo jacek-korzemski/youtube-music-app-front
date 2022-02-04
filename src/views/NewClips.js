@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Loading from "components/Loading/Loading";
 import ClipsList from "components/ClipsList/ClipsList";
 import Page from "components/AppWrapper/Page";
-import { api_url } from "Config";
+import { getNewVideos } from "utils/apis";
 
 const NewClips = () => {
     const [loading, setLoading] = useState(true);
@@ -10,22 +10,14 @@ const NewClips = () => {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        fetch(api_url + "/getNewVideos")
-            .then((res) => {
-                if (!res.ok) {
-                    throw new Error("Error while communication with API.");
-                } else {
-                    return res.json();
-                }
-            })
+        getNewVideos()
             .then((res) => {
                 setData(res);
                 setLoading(false);
             })
-            .catch((err) => {
-                setError(true);
+            .catch(() => {
                 setLoading(false);
-                console.log(err);
+                setError(true);
             });
     }, []);
 

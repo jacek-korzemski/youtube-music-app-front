@@ -2,30 +2,23 @@ import { useState, useEffect } from "react";
 import Page from "components/AppWrapper/Page";
 import Loading from "components/Loading/Loading";
 import ChannelsList from "components/ChannelsList/ChannelsList";
-import { api_url } from "Config";
+import { getAllChannels } from "utils/apis";
 
 const Channels = () => {
     const [loading, setLoading] = useState(true);
-    const [data, setData] = useState([]);
+    const [data, setData] = useState(false);
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        fetch(api_url + "/getAllChannels")
-            .then((res) => {
-                if (!res.ok) {
-                    throw new Error("Error while communication with API.");
-                } else {
-                    return res.json();
-                }
-            })
+        setLoading(true);
+        getAllChannels()
             .then((res) => {
                 setData(res);
                 setLoading(false);
             })
-            .catch((err) => {
-                setError(true);
+            .catch(() => {
                 setLoading(false);
-                console.log(err);
+                setError(true);
             });
         // eslint-disable-next-line
     }, []);
