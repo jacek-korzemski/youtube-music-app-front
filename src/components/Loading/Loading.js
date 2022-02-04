@@ -1,14 +1,16 @@
-import "./Loading.css";
+import { LoadingWrapper } from "./Wrappers";
 
 const Loading = () => {
     return (
-        <div className="loading-wrapper">
-            <div className="snippet" data-title=".dot-falling">
-                <div className="stage">
-                    <div className="dot-falling"></div>
+        <LoadingWrapper>
+            <div className="loading-wrapper">
+                <div className="snippet" data-title=".dot-falling">
+                    <div className="stage">
+                        <div className="dot-falling"></div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </LoadingWrapper>
     );
 };
 

@@ -5,15 +5,15 @@ import Button from "components/Button/Button";
 import { api_url } from "Config";
 import LoadingBlack from "components/Loading/LoadingBlack";
 
-const LoginModal = () => {
+const RegisterModal = () => {
     const user = useContext(AppContext);
-    const [loading, setLoading] = useState < boolean > false;
-    const [username, setUsername] = useState < string > "";
-    const [email, setEmail] = useState < string > "";
-    const [email2, setEmail2] = useState < string > "";
-    const [warningAccepted, setWarningAccepted] = useState < boolean > false;
-    const [privacyAccepted, setPrivacyAccepted] = useState < boolean > false;
-    const [success, setSuccess] = useState < boolean > false;
+    const [loading, setLoading] = useState(false);
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [email2, setEmail2] = useState("");
+    const [warningAccepted, setWarningAccepted] = useState(false);
+    const [privacyAccepted, setPrivacyAccepted] = useState(false);
+    const [success, setSuccess] = useState(false);
 
     const validateEmail = () => {
         const re =
@@ -125,7 +125,7 @@ const LoginModal = () => {
                                     name="warning_checkbox"
                                     value={"warning accepted"}
                                     checked={warningAccepted}
-                                    onClick={() => setWarningAccepted(!warningAccepted)}
+                                    onChange={() => setWarningAccepted(!warningAccepted)}
                                 />
                                 I've read the warning on the right. I understand and I am accepting the risk.
                             </label>
@@ -137,7 +137,7 @@ const LoginModal = () => {
                                     name="warning_checkbox"
                                     value={"privacy accepted"}
                                     checked={privacyAccepted}
-                                    onClick={() => setPrivacyAccepted(!privacyAccepted)}
+                                    onChange={() => setPrivacyAccepted(!privacyAccepted)}
                                 />
                                 I've read the privacy policy, I understand it, and I accept it.
                             </label>
@@ -184,4 +184,4 @@ const LoginModal = () => {
     );
 };
 
-export default LoginModal;
+export default RegisterModal;

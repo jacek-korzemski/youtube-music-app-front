@@ -6,6 +6,7 @@ on:
             - main
             - "new/**"
             - "feature/**"
+            - "update/**"
 
 jobs:
     run-lint:
