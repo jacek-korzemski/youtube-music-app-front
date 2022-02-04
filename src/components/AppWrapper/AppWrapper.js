@@ -8,6 +8,7 @@ import Clip from "views/Clip";
 import Channels from "views/Channels";
 import Channel from "views/Channel";
 import Index from "views/Index";
+import Search from "views/Search";
 
 export const AppContext = React.createContext();
 
@@ -50,6 +51,7 @@ const AppWrapper = () => {
                         <Route path="/reviews"></Route>
                         <Route path="/clip/:id" element={<Clip />} />
                         <Route path="/channel/:id" element={<Channel />} />
+                        <Route path="/search" element={<Search />} />
                     </Routes>
                 </Wrapper>
                 {modal && <ModalWrapper>{modal}</ModalWrapper>}

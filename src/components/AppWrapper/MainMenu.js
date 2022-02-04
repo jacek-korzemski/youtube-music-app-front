@@ -14,16 +14,6 @@ const MainMenu = () => {
                     Channels
                 </NavLink>
             </li>
-            <li>
-                <NavLink to="/top-clips" className={(navData) => (navData.isActive ? "active" : "")}>
-                    Top clips
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to="/reviews" className={(navData) => (navData.isActive ? "active" : "")}>
-                    Reviews
-                </NavLink>
-            </li>
         </MainMenuWrapper>
     );
 };

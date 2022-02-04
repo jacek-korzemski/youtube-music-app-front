@@ -9,3 +9,13 @@ export function getSingleChannelData(id) {
             console.log(err);
         });
 }
+
+export function getSearchedData(s) {
+    return fetch(api_url + "/search/" + s, { method: "GET" })
+        .then((res) => {
+            return res.json();
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+}
