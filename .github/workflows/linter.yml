@@ -1,6 +1,11 @@
 name: Lint Code Base
 
-on: [push]
+on:
+    push:
+        branches:
+            - main
+            - "new/**"
+            - "feature/**"
 
 jobs:
     run-lint:
